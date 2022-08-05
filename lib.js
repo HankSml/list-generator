@@ -44,3 +44,10 @@ class Intern extends Employee {
         return school
     }
 }
+
+module.exports = {
+    Employee,
+    Engineer,
+    Manager,
+    Intern
+}

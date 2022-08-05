@@ -32,7 +32,39 @@ let pageBase =
 </body>
 </html>`;
 
+// function writeToFile(fileName, data) {
+//     fs.writeFile(fileName, data, err => {
+//         if (err) {
+//             console.error(err);
+//         }
+//     })
+// }
+
+const managerPrompts = [
+    {
+        name: 'name',
+        message: "What is the team manager's name?",
+        type: 'input'
+        },
+        {
+            name: 'id',
+            message: "What is the team manager's ID?",
+            type: 'input'
+        },
+        {
+            name: 'email',
+            message: "What is the team manager's email address?",
+            type: 'input'
+        },
+        {
+            name: 'office',
+            message: "What is the team manager's office number?",
+            type: 'input'
+        }
+];
+
 module.exports = {
     cardBase,
     pageBase,
+    managerPrompts
 };

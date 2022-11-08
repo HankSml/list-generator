@@ -1,6 +1,7 @@
 let inquirer = require('inquirer');
 const { Employee, Intern, Manager, Engineer } = require('./lib');
-const { pageBase, managerPrompts, cardBase } = require('./src');
+const { pageBase, cardBase } = require('./src/pages');
+const { managerPrompts } = require('./src/prompts')
 
 
 async function getInputs() {

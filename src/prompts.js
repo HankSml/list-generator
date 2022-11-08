@@ -21,6 +21,4 @@ const managerPrompts = [
         }
 ];
 
-module.exports = {
-    managerPrompts: managerPrompts
-}
+module.exports = { managerPrompts }

@@ -73,7 +73,7 @@ const internPrompts = [
         type: 'input'
     },
     {
-        name: 'office',
+        name: 'school',
         message: "What is the name of the intern's school?",
         type: 'input'
     }

@@ -1,4 +1,4 @@
-let cardBase =
+const cardBase =
     `<div class="card">
         <div class="card-head">
             <h2></h2>
@@ -13,7 +13,7 @@ let cardBase =
         </div>
     </div>`;
 
-let pageBase = 
+const pageBase = 
 `<!DOCTYPE html>
 <html lang="en-us">
 <head>
@@ -32,39 +32,6 @@ let pageBase =
 </body>
 </html>`;
 
-// function writeToFile(fileName, data) {
-//     fs.writeFile(fileName, data, err => {
-//         if (err) {
-//             console.error(err);
-//         }
-//     })
-// }
 
-const managerPrompts = [
-    {
-        name: 'name',
-        message: "What is the team manager's name?",
-        type: 'input'
-        },
-        {
-            name: 'id',
-            message: "What is the team manager's ID?",
-            type: 'input'
-        },
-        {
-            name: 'email',
-            message: "What is the team manager's email address?",
-            type: 'input'
-        },
-        {
-            name: 'office',
-            message: "What is the team manager's office number?",
-            type: 'input'
-        }
-];
 
-module.exports = {
-    cardBase,
-    pageBase,
-    managerPrompts
-};
+module.exports = {cardBase, pageBase};

@@ -1,6 +1,5 @@
 const fs = require('fs');
 const {base, managerCard, engineerCard, internCard} = require('./components')
-const { Employee, Intern, Manager, Engineer } = require('../lib');
 
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, err => {
@@ -22,14 +21,16 @@ function generatePage(employees) {
                 break;
             case 'Intern':
                 cardList.push(internCard(employee))
+                break;
             default:
                 console.log(employee)
+                console.log(employee.getRole())
                 console.log('Error assigning card type')
                 break;
         }
-        const pageData = base(cardList);
-        writeToFile('../dist/index.html', pageData)
-    });
+    })
+    const pageData = base(cardList);
+    writeToFile(__dirname + '/../dist/list.html', pageData)
 }
 
 module.exports = { writeToFile, generatePage };

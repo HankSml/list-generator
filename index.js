@@ -16,7 +16,6 @@ async function app() {
     let cont = true;
     while (cont === true) {
         let answer = await inquirer.prompt(menuPrompts);
-        console.log(answer)
 
         if (answer.menuChoice === 'Finish and get my webpage') {
             generatePage(employees)

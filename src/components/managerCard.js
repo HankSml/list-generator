@@ -1,5 +1,3 @@
-const { Manager } = require('../../lib')
-
 const managerCard = (manager) => {
     return (
         `<div class="card">

@@ -1,11 +1,10 @@
 let inquirer = require('inquirer');
 const { Employee, Intern, Manager, Engineer } = require('./lib');
-const { pageBase, cardBase } = require('./src/pages');
-const { managerPrompts, menuPrompts, engineerPrompts, internPrompts } = require('./src/prompts')
-const { writeToFile } = require('./src/utils')
+const { managerPrompts, menuPrompts, engineerPrompts, internPrompts } = require('./src/prompts');
+const { writeToFile, generatePage } = require('./src/utils')
 
 
-async function generatePage() {
+async function app() {
     let employees = [];
 
     let managerData = await inquirer.prompt(managerPrompts);
@@ -20,7 +19,7 @@ async function generatePage() {
         console.log(answer)
 
         if (answer.menuChoice === 'Finish and get my webpage') {
-            // writeToFile(employees)
+            generatePage(employees)
             console.log('Goodbye!')
             cont = false
         } else if (answer.menuChoice === 'Add an engineer') {
@@ -43,4 +42,4 @@ async function generatePage() {
     }
 }
 
-generatePage();
+app();
